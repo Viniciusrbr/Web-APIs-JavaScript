@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APIs Web Nativas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>APIs Web Nativas</h1>
+
+  <div class="card">
+    <h2>1. Web Speech API</h2>
+    <textarea id="textToSpeak"
+      rows="3">Olá! Eu sou a API de síntese de voz. Posso falar qualquer texto que você digitar aqui.</textarea>
+    <button onclick="webAPIs.speak()">Falar</button>
+    <button onclick="webAPIs.stopSpeaking()">Parar</button>
+  </div>
+
+  <div class="card">
+    <h2>2. Geolocalização</h2>
+    <button onclick="webAPIs.getLocation()">Obter Localização</button>
+    <div id="locationResult" class="result"></div>
+  </div>
+
+  <div class="card">
+    <h2>3. Notificações</h2>
+    <button onclick="webAPIs.requestNotificationPermission()">Solicitar Permissão</button>
+    <button onclick="webAPIs.showNotification()">Mostrar Notificação</button>
+  </div>
+
+  <div class="card">
+    <h2>4. Status da Bateria</h2>
+    <button onclick="webAPIs.getBatteryStatus()">Verificar Bateria</button>
+    <div id="batteryResult" class="result"></div>
+  </div>
+
+  <div class="card">
+    <h2>5. Clipboard API</h2>
+    <textarea id="clipboardText" rows="2">Este texto será copiado para a área de transferência!</textarea>
+    <button onclick="webAPIs.copyToClipboard()">Copiar</button>
+    <button onclick="webAPIs.pasteFromClipboard()">Colar</button>
+  </div>
+
+  <div class="card">
+    <h2>6. Vibration API</h2>
+    <button onclick="webAPIs.vibrateShort()">Vibrar (Curto)</button>
+    <button onclick="webAPIs.vibrateLong()">Vibrar (Padrão)</button>
+    <button onclick="webAPIs.vibratePattern()">Vibrar (Padrão SOS)</button>
+  </div>
+
+  <div class="card">
+    <h2>7. Device Orientation API</h2>
+    <button onclick="webAPIs.startOrientationTracking()">Iniciar Rastreamento</button>
+    <div id="orientationResult" class="result"></div>
+    <div class="orientation-box"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
